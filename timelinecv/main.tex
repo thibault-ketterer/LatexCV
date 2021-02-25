@@ -1,0 +1,239 @@
+% This is a CV template based on hipstercv. It has the added functionality of a timeline 
+\documentclass[bluebeige]{hipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, bluebeige
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage[T1]{fontenc}
+
+
+\newcommand{\name}{Thibault Ketterer}
+\newcommand{\email}{thekit@gmail.com}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.3\textwidth}
+\setlength{\rightcolwidth}{0.65\textwidth}
+
+%------------------------------------------------------------------
+\title{timeline-CV}
+\author{\LaTeX{} Ninja}
+\date{March 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+
+
+\header{\bg{headerfontbox}{headerfontboxfont}{\LobsterTwo  Mr} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge \name}}{\bg{headerfontbox}{headerfontboxfont}{\large Senior DevOps}}{moi.jpg}{headerblue}{3cm}{1.7cm}
+
+
+
+%------------------------------------------------
+
+% this needs to be here so paracol will start
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.3}[0.65]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\bg{cvgreen}{white}{\LobsterTwo \huge Facts} \\
+\bg{cvgreen}{white}{personal} \\
+
+\begin{tabular}{ll}
+\faMale&\name \\
+\faGlobe& nationality: French  \\
+\faBirthdayCake&1980 \\
+\faMapMarker&France \\
+\end{tabular}
+
+\vfill
+
+
+\bg{cvgreen}{white}{\LobsterTwo \huge Skills}
+\bigskip
+
+
+\begin{minipage}[t]{\leftcolwidth}
+\begin{tabular}{l | ll}
+\textbf{French}         & C2 & {\phantom{x}\footnotesize mother tongue} \\
+\textbf{English}        & C1 & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+
+\end{tabular}
+\end{minipage}
+
+\vfill
+
+\bg{cvgreen}{white}{Interests}\\
+
+\bubblediagram{\textbf{DevOps}, monitoring, security, automation, analyze, srcipting, alerting}
+
+\vfill
+
+\hspace{2.7cm} \color{labelcolour}{OS:} \hspace{0.4em}\icon{\faApple}{labelcolour}{\Large}\icon{\faLinux}{labelcolour}{\Large} 
+
+\vfill
+
+\bg{cvgreen}{white}{IT \& programming} \\
+
+\begin{minipage}[t]{0.3\textwidth}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{AWS}        & \barrule{0.4}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Jenkins}    & \barrule{0.2}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Terraform}  & \barrule{0.4}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Kubernetes} & \barrule{0.4}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Python}     & \barrule{0.45}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{MySQL}      & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Shell}      & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Go        } & \barrule{0.1}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{C         } & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{nginx     } & \barrule{0.55}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Vim       } & \barrule{0.55}{0.5em}{cvgreen} \\
+%     \bg{skilllabelcolour}{iconcolour}{\LaTeX}     & \barrule{0.1}{0.5em}{cvpurple} \\
+%     \bg{skilllabelcolour}{iconcolour}{html, css}  & \barrule{0.2}{0.5em}{cvpurple}\\
+ 
+\end{tabular}
+
+
+%\dashrule{}{}
+\end{minipage}
+
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+
+\vspace{1em}
+
+\scalebox{0.65}%
+{%
+% arguments: start/end - end/start - "Scale: how many steps" - colour of the circles
+% if directionality is mixed up, try switching start and end and recompile
+% if items "fall out of the line", you might have to little "steps"/scale (up the number)
+% if you need "too many", use scalebox to resize the whole timeline
+\begin{timelinehorizontal}{2021}{2003}{18}{timelinecolour}
+% arguments: year - colour - date - label - (distance to top) - (angle to side)
+% distance and angle can be used to arrange more items on the timeline manually
+% bc otherwise, on a horizontal timeline, they will overlap almost immediately
+\event{2004}{cvbeige}{}{\textbf{Developper} | Ecasting}{6}{2}
+\event{2007}{cvbeige}{}{\textbf{Linux/Sun sysadmin} | RTE}{5.2}{1.2}
+\event{2010}{cvbeige}{}{\textbf{Debian sysadmin} | Brainsonic}{4.4}{-0.5}
+\event{2014}{cvbeige}{}{\textbf{Deputy CTO} | Holimetrix}{3.5}{-2.5}
+\event{2018}{cvbeige}{}{\textbf{DevOps Teacher / Freelancer} | IPSSI / various}{2.5}{-4.5}
+\event{2019}{cvbeige}{}{\textbf{Senior DevOps} | Bedrock}{1.7}{-2.2}
+% keep the items in order (by date) or it will cause problems
+\end{timelinehorizontal}
+}
+
+
+\vspace{4em}
+
+
+\begin{minipage}[t]{0.4\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2004}{computer science security}{M.A.}{France Paris Uni \color{headerblue}}{}{epita.jpeg} \\
+    \cvdegree{1998}{Bac Science}{B.A.}{France \color{headerblue}}{}{eiffel.png} \\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.16\textwidth}
+\section*{Hobbies}
+% usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
+\hobbyicon{\color{iconcolour}\faBtc}{Crypto}{cvgreen}{\iconsize}{2em} \hfill
+\hobbyicon{\color{iconcolour}\faBook}{Reading}{cvorange}{\iconsize}{2em}
+
+\hobbyicon{\color{iconcolour}\faTools}{DIY}{cvpurple}{\iconsize}{2em} \hspace{1em}
+\hobbyicon{\color{iconcolour}\faLeaf}{Garden}{headerblue}{\iconsize}{2em}
+\end{minipage}
+
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Certificates}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    2009 & RedHat Certified Engineer
+\end{tabular}
+
+\section*{Contributions}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+	2021 & superset\\
+	2014 & airflow fix and documentation
+\end{tabular}
+
+\section*{Articles}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+	2020 & headless raspberry pi\\
+	2019 & android speech recognition overview
+\end{tabular}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Nerd Activities}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+	2021 & machine learning my kid sleep with OpenCV(WIP)\\
+	2019 & V2 of previous app fully local (using pocketsphinx)\\
+    2018 & dev Android apps for kids with autism, working with speech recognition; and touch interfaces\\
+	2017 & Crypto mining (XMR)\\
+	2015 & crontrolling my home heater with a raspberry Pi(before google nest)
+\end{tabular}
+
+\end{minipage}
+
+\vspace{2em}
+
+% arguments: <line thickness>  <colour>    <size> <other colour> <label inside> <below> <where is the label> <percentage>
+\progressarc{2mm}{headerblue}{0.7cm}{cvbeige}{\large 95\%}{Programming}{below}{95} \hfill
+\progressarc{2mm}{headerblue}{0.7cm}{cvbeige}{\large 75\%}{Infra-as-Code}{below}{75} \hfill
+\progressarc{2mm}{headerblue}{0.7cm}{cvbeige}{\large 100\%}{Open Source}{below}{100} \hfill
+\progressarc{2mm}{headerblue}{0.7cm}{cvbeige}{\large 80\%}{Security}{below}{60}
+
+
+%\progressarc{2mm}{headerblue}{1cm}{cvbeige}{\large\bf \textbf{.cpp}}{Object-Oriented \\ Programming}{below}{40}
+
+% you need some vspace so the sidebar will be filled in for the whole page
+\vspace{3em}
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small \name \icon{\faEnvelope}{cvpurple}{} France \icon{\faMapMarker}{cvpurple}{} 12 rue jean louis vincent 69005 Lyon \newline
+	\icon{\faPhone}{cvpurple}{} +33664196240 \icon{\faAt}{cvpurple}{} \protect\url{\email}
+}
+\end{center}
+\end{minipage}
+
+
+\end{paracol}
+
+\end{document}

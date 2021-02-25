@@ -1,0 +1,187 @@
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\newcommand{\experience}{RTE}
+
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Thibault Ketterer}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+\tagline{DevOps \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{moi}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{thekit@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{12 rue jean louis vincent, 69005 Lyon France}
+  \location{Lyon, France}
+  \homepage{https://thekit-14747.medium.com/}
+  \twitter{@KettererThib}
+  \linkedin{thibaultk}
+  \github{github.com/thibault-ketterer} 
+}
+
+\makecvheader
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience - \experience}
+\experience is a french Energy company, my department ws in charge and Research around electricity consumption prevision.\\
+\bigskip
+\cvevent{DevOps \& SRE}{\experience}{Mar 2055 - Apr 2010}{France, Paris}
+\parskip=12pt % adds vertical space between paragraphs
+
+\begin{itemize}
+\item managed computing clusters OnPremise
+\item multi UNIX hosting
+\item high speed computing development(before big data exist)
+\item authentication servers / file servers
+\item work with a team of 100 Research engineers
+\item VM hosting, local network, fibe channel..
+\item C++ and perl development
+\end{itemize}
+
+%\parskip=0pt % remove vertical space between paragraphs
+
+\cvsection{Typical week}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-2.5em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{2cm}{1cm}{%
+  15/13em/accent!30/Munin \& Zabbix,
+  5/9em/accent!60/\faPython python,
+  20/11em/accent!10/shell scripts,
+  10/8em/accent!30/perl,
+  10/8em/accent!30/documentation,
+  5/8em/accent!20/backup,
+  5/8em/accent!50/security,
+  5/8em/accent!10/CISCO
+}
+
+\parskip=0pt % remove vertical space between paragraphs
+
+\cvsection{Referees}
+
+
+\cvref{Xavier Droniou - manager}{\experience}{raviere29@gmail.com}
+{now Orange Business, France}
+
+\divider
+\cvref{Vincent Lefieux - co-worker}{\experience}{vincent.lefieux@rte-france.com}
+{RTE, France}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Experience modjo}
+\begin{quote}
+``We can compute anything''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faUsers}{Authentication}{rebuilt the authentication system, migrate from Solaris to Linux LDAP}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Persistence}{from developper to a team leader and main DevOp, I raised the hand and said I could do the job, and I could.}
+
+\divider
+
+\cvachievement{\faDollarSign}{budget management}{buying and negotiating for servers, routers, NAS...}
+
+\divider
+
+\cvachievement{\faMale}{young but tech ready}{tech lead of 6 people older than me (I was 24)}
+
+
+\cvsection{Strengths}
+
+\cvtag{computing}
+\cvtag{working with different fileds engineers}
+\cvtag{Streaming, live diffusion}
+
+\divider\smallskip
+
+\cvtag{DevOps}
+\cvtag{managing issues}
+\cvtag{ticketing}
+\cvtag{have a BIG budget}
+
+\cvsection{Languages \& Techs}
+
+\parskip=3pt % small space here
+
+\cvskill{CISCO}{4}
+\cvskill{Linux}{5}
+\cvskill{Solaris}{4}
+\cvskill{Windows AD servers}{3}
+\divider
+
+% \divider
+\cvskill{perl}{4}
+\cvskill{C++}{4}
+\cvskill{bash}{4}
+
+\end{paracol}
+
+\end{document}
+

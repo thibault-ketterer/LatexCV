@@ -1,0 +1,225 @@
+
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Thibault Ketterer}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+\tagline{DevOps \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{moi}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{thekit@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{12 rue jean louis vincent, 69005 Lyon France}
+  \location{Lyon, France}
+  \homepage{https://thekit-14747.medium.com/}
+  \twitter{@KettererThib}
+  \linkedin{thibaultk}
+  \github{github.com/thibault-ketterer} 
+}
+
+\makecvheader
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Senior DevOps}{BedRock}{Nov 2019 -- Ongoing}{France, Lyon}
+
+% paragraph skip
+\parskip=12pt % adds vertical space between paragraphs
+
+Data Infrastructure Team at Bedrock
+
+
+Bedrock is building streaming platforms (like netflix) the most know customers are currently Salto (new french SVOD platform) and 6play(M6 TV channel)
+
+
+I am the Data infrastructure needed to handle SVOD data (medias and user tracking)
+aws +  EMR for data platform airflow as a scheduler, dataviz by Superset.
+
+
+We migrate from a POC to a complete EKS managed solution, scalabe and reliable, monitoring  with prometheus and aws cloudwatch, did some PRs to superset.\\
+
+We manage to transform and orchestrate the infrastructure to scale more and multiply it for every customer, leveraging a lot of terraform and kubernetes.\\
+\begin{itemize}
+\item from POC to automatic deployment
+\item Went from 1 to 10 customer in one year.
+\item Evolving from a 2 hour deployment to 2 seconds (k8s)
+\end{itemize}
+
+% paragraph skip
+\parskip=0pt % remove vertical space between paragraphs
+
+\cvsection{Typical week}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-2.5em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{2cm}{1cm}{%
+  15/13em/accent!30/Prometheus \&\\ Grafana,
+  15/9em/accent!60/\faPython python,
+  5/11em/accent!10/shell scripts,
+  10/11em/accent!40/Agile rituals,
+  5/8em/accent!20/jenkins,
+  10/8em/accent!30/github,
+  5/8em/accent!20/airflow,
+  10/9em/accent!50/reading PR,
+  5/8em/accent!40/Terraform,
+  2/8em/accent!20/Superset,
+  7/8em/accent!30/Aws,
+  7/8em/accent!20/Kubernetes
+}
+
+
+
+\cvsection{Referees}
+
+
+\cvref{Adrien Chaussende - Team technical leader}{BedRock}{adrien.chaussende@bedrockstreaming.com}
+{Bedrock Streaming\\Lyon France}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Experience modjo}
+\begin{quote}
+``Sharing is caring, be active in the communities''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faUsers}{team player}{always full of ideas to improve our work}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Persistence \& Loyalty}{I showed despite the hard moments and my willingness to stay with Yahoo after the acquisition}
+
+\divider
+
+\cvachievement{\faChartLine}{data evolution}{from a POC to a multiple customer infrastructure}
+
+\divider
+
+\cvachievement{\faChild}{handle 3 Kids}{take care of my autistic and disabled kid without impacing my work}
+
+\cvsection{Strengths}
+
+\cvtag{lots of ideas}
+\cvtag{highly skilled in data}\\
+\cvtag{highly skilled in infrastructure}
+
+\divider\smallskip
+
+\cvtag{Data}
+\cvtag{Kubernetes}
+\cvtag{Migrations}
+\cvtag{POCs}
+\cvtag{Research \& Development}
+
+\cvsection{Languages}
+
+\parskip=3pt % small space here
+
+\cvskill{Terraform}{4}
+\cvskill{Shell}{5}
+% \divider
+
+\cvskill{Golang}{1}
+% \divider
+\cvskill{Python}{4}
+\cvskill{Bash}{5}
+\cvskill{Aws}{4}
+
+\end{paracol}
+
+\end{document}
+

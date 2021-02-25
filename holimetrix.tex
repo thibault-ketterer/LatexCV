@@ -1,0 +1,233 @@
+
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\newcommand{\experience}{Holimetrix}
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Thibault Ketterer}
+
+
+\tagline{DevOps \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{moi}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{thekit@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{12 rue jean louis vincent, 69005 Lyon France}
+  \location{Lyon, France}
+  \homepage{https://thekit-14747.medium.com/}
+  \twitter{@KettererThib}
+  \linkedin{thibaultk}
+  \github{github.com/thibault-ketterer} 
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience - \experience}
+\experience is a company focus on drive to web: measuring the rate of TV ads viewers who are converted to internet users.
+
+\bigskip
+
+\cvevent{deputy CTO}{\experience}{Mar 2014 - Apr 2018}{France, Lyon}
+\parskip=12pt % adds vertical space between paragraphs
+
+As a deputy CTO, I took care of
+
+\begin{itemize}
+\item defining the data exchange strategy and details with partners
+\item project managment, deliverability
+\item designing technical solutions
+\item team management
+\end{itemize}
+\parskip=0pt % adds vertical space between paragraphs
+\cvevent{Lead DevOps}{\experience}{Mar 2014 - Apr 2018}{France, Lyon}
+\parskip=12pt % adds vertical space between paragraphs
+Our job was to Aggregate data from our web trackers to our on-premise hadoop cluster, then deliver the data to our angular portal in near real time.
+\begin{itemize}
+\item from nothing to webservers handling thousands of request per second without CDN
+\item created all the infrastrucutre as a code with saltstack and ansible
+\item monitored heavily the web servers and data streaming platform
+\item tested lots of technologies quickly (startup rush) GCP aws, hadoop distros
+\item migrate to aws, then migrate back to On Premise(to reduce costs by a 4 factor)
+\item built a TV advertising recognition system from scratch (image and sound recognition)
+\end{itemize}
+
+% paragraph skip
+%\parskip=0pt % remove vertical space between paragraphs
+
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+\cvsection{Typical week}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-2.5em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{2cm}{1cm}{%
+  15/13em/accent!30/Munin \&\\ Prometheus \&\\ Grafana,
+  15/9em/accent!60/\faPython python,
+  5/11em/accent!10/shell scripts,
+  5/11em/accent!40/Agile rituals,
+  10/8em/accent!30/github,
+  5/8em/accent!30/jenkins,
+  5/8em/accent!20/airflow,
+  7/8em/accent!30/hadoop,
+  10/8em/accent!40/Ansible,
+  5/8em/accent!40/Salstack,
+  5/8em/accent!30/Aws,
+  5/8em/accent!30/OVH(OnPremise),
+  7/8em/accent!20/docker,
+  7/8em/accent!20/rancher
+}
+
+\parskip=0pt % remove vertical space between paragraphs
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Experience modjo}
+\begin{quote}
+``Startup + data + nginx rocks''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faUsers}{team player}{from 3 to 18 person, adapting our ways of workings}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Persistence \& Loyalty}{Gone through rough times with a limited team, but achieve rentability at the end}
+
+\divider
+
+\cvachievement{\faDumbbell}{no downtime}{Our tracker tag was integrated on many french bit sites like orange, Renault, VW, Jaguar, we didn't suffered any downtime in 4 years.}
+
+\divider
+
+\cvachievement{\faChild}{handle 3 Kids}{take care of my autistic and disabled kid without impacing my work}
+
+\cvsection{Strengths}
+
+\cvtag{go fast}
+\cvtag{nginx}
+\cvtag{web tracking}\\
+\cvtag{Startup = I can/will do anything}
+
+\divider\smallskip
+
+\cvtag{BIG Data}
+\cvtag{infrastructure as code}
+\cvtag{Migrations}
+\cvtag{POCs}
+\cvtag{Research \& Development}
+
+\cvsection{Languages}
+
+\parskip=3pt % small space here
+
+\cvskill{Ansible}{5}
+\cvskill{Saltstack}{5}
+\divider
+
+% \divider
+\cvskill{Lua}{3}
+\cvskill{Python}{4}
+\cvskill{PHP symfony}{2}
+\cvskill{vanilla javascript}{3}
+\cvskill{Bash}{5}
+
+\cvsection{Referees}
+
+\cvref{Olivier - former COO}{\experience}{olivier.rivet@holimetrix.com}
+{\experience\\Lyon France}
+
+
+\end{paracol}
+
+\end{document}
+
