@@ -1,4 +1,4 @@
-# AltaCV, mixed with imtelinecv
+# Multi page CV; AltaCV, mixed with timelinecv
 
 https://github.com/liantze/AltaCV
 
