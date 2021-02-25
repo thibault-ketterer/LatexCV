@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  24 FEB 2021 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  25 FEB 2021 22:24
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **rte.tex
 (./rte.tex
@@ -1269,11 +1268,6 @@ Overfull \hbox (1.59999pt too wide) in paragraph at lines 153--153
 []|[]| 
  []
 
-
-Overfull \hbox (44.24446pt too wide) in paragraph at lines 158--161
-[][]  [] 
- []
-
 [1
 
  <./moi.jpg>]
@@ -1292,7 +1286,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
 Here is how much of TeX's memory you used:
  39175 strings out of 480608
  753586 string characters out of 5903630
- 1366583 words of memory out of 5000000
+ 1366582 words of memory out of 5000000
  54462 multiletter control sequences out of 15000+600000
  870150 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1311,7 +1305,7 @@ me5Free-Solid.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/typoland/lato
 /Lato-Bold.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/typoland/lato/La
 to-Italic.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/typoland/lato/Lat
 o-Regular.pfb>
-Output written on rte.pdf (1 page, 178505 bytes).
+Output written on rte.pdf (1 page, 178610 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

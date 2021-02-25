@@ -5,6 +5,7 @@
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
 \usepackage[T1]{fontenc}
+\usepackage{datenumber,fp}
 
 
 \newcommand{\name}{Thibault Ketterer}
@@ -20,8 +21,8 @@
 
 %------------------------------------------------------------------
 \title{timeline-CV}
-\author{\LaTeX{} Ninja}
-\date{March 2019}
+\author{thibault-ketterer}
+\date{Feb 2021}
 
 \pagestyle{empty}
 \begin{document}
@@ -32,9 +33,12 @@
 
 \section*{Start}
 
+%XP calc
+\FPsub\result{\the\year}{2004}
+\FPround\result{\result}{0}
 
 
-\header{\bg{headerfontbox}{headerfontboxfont}{\LobsterTwo  Mr} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge \name}}{\bg{headerfontbox}{headerfontboxfont}{\large Senior DevOps}}{moi.jpg}{headerblue}{3cm}{1.7cm}
+\header{\bg{headerfontbox}{headerfontboxfont}{\LobsterTwo  Senior DevOps} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge \name}}{\bg{headerfontbox}{headerfontboxfont}{\large level \result\ (years)}}{moi.jpg}{headerblue}{3cm}{1.7cm}
 
 
 
@@ -86,7 +90,7 @@
 
 \bg{cvgreen}{white}{Interests}\\
 
-\bubblediagram{\textbf{DevOps}, monitoring, security, automation, analyze, srcipting, alerting}
+\bubblediagram{\textbf{DevOps}, monitoring, security, automation, analyze, scripting, alerting}
 
 \vfill
 
@@ -157,7 +161,7 @@
 \begin{minipage}[t]{0.4\textwidth}
 \section*{Degrees}
 \begin{tabular}{r p{0.6\textwidth} c}
-    \cvdegree{2004}{computer science security}{M.A.}{France Paris Uni \color{headerblue}}{}{epita.jpeg} \\
+    \cvdegree{2004}{computer science security \& networks \& systems}{M.A.}{France Paris Uni \color{headerblue}}{}{epita.jpeg} \\
     \cvdegree{1998}{Bac Science}{B.A.}{France \color{headerblue}}{}{eiffel.png} \\
 \end{tabular}
 \end{minipage}\hfill
@@ -195,11 +199,12 @@
 \begin{minipage}[t]{0.3\textwidth}
 \section*{Nerd Activities}
 \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+	2021 & writing my cv in \LaTeX\\
 	2021 & machine learning my kid sleep with OpenCV(WIP)\\
 	2019 & V2 of previous app fully local (using pocketsphinx)\\
     2018 & dev Android apps for kids with autism, working with speech recognition; and touch interfaces\\
 	2017 & Crypto mining (XMR)\\
-	2015 & crontrolling my home heater with a raspberry Pi(before google nest)
+	2015 & crontrolling my home heater with a raspberry Pi (before google nest)
 \end{tabular}
 
 \end{minipage}

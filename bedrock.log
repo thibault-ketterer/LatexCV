@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  24 FEB 2021 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  25 FEB 2021 22:24
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **bedrock.tex
 (./bedrock.tex
@@ -1308,7 +1307,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
 Here is how much of TeX's memory you used:
  39243 strings out of 480608
  755062 string characters out of 5903630
- 1368602 words of memory out of 5000000
+ 1368601 words of memory out of 5000000
  54530 multiletter control sequences out of 15000+600000
  870147 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
