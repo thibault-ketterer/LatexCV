@@ -1,6 +1,6 @@
-pdflatex=/Applications/TeX/TeXShop.app/Contents/Resources/TeXShop/bin/pdflatexc
+pdflatex=pdflatex
 
-thibault-ketterer-resume-2021.pdf: holimetrix.pdf brainsonic.pdf rte.pdf bedrock.pdf main.pdf
+thibault-ketterer-resume-2021.pdf: holimetrix.pdf brainsonic.pdf rte.pdf bedrock.pdf yogosha.pdf main.pdf
 	$(pdflatex) all.tex
 
 
