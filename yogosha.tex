@@ -1,0 +1,218 @@
+
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Thibault Ketterer}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+\tagline{DevOps \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{moi}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{thekit@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{12 rue jean louis vincent, 69005 Lyon France}
+  \location{Lyon, France}
+  \homepage{https://thekit-14747.medium.com/}
+  \twitter{@KettererThib}
+  \linkedin{thibaultk}
+  \github{github.com/thibault-ketterer} 
+}
+
+\makecvheader
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Senior DevOps}{Yogosha}{Nov 2021 -- Ongoing}{France, ..anywhere..}
+
+% paragraph skip
+\parskip=12pt % adds vertical space between paragraphs
+
+Infrastructure Team at Yogosha
+
+Yogosha is a french Bug Bounty startups with many clients around the world and a strong community.
+
+Since 2021 I'm playing a pivotal role as a DevOps engineer at  Yogosha bug bounty company, leading the transition from a complex 15-machine deployment to a simplified and more streamlined solution using Kubernetes and Helm charts. 
+
+Deployment time as streched from 6 months to 1 week due to this work.\\
+
+Using widely known open source software, and focusing a lot on containerization, I ensured the isolation and security of the deployed software.\\
+\begin{itemize}
+\item from POC 15 host to 1 kube
+\item managed to deploy this solution is 6 IT big players company around the globe
+\item Evolving from a 6 months deployment to 1 week (k8s)
+\end{itemize}
+
+% paragraph skip
+\parskip=0pt % remove vertical space between paragraphs
+
+\cvsection{Typical week}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\hspace*{-2.5em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{2cm}{1cm}{%
+  3/13em/accent!30/CI admin,
+  4/8em/accent!20/devops,
+  6/9em/accent!60/\faPython python,
+  7/8em/accent!30/gitlab,
+  6/9em/accent!50/reading PR,
+  4/8em/accent!40/Terraform,
+  41/8em/accent!20/Helm charting,
+  31/8em/accent!20/Kubernetes/k3s
+}
+
+
+
+\cvsection{Referencies}
+
+
+\cvref{Boris Zanetti - Head of IT}{Yogosha}{boris.zanetti@yogosha.com}
+{Yogosha\\Paris France}
+\cvref{Eric Dupre - CTO}{Yogosha}{eric.dupre@yogosha.com}
+{Yogosha\\Lyon France}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Experience modjo}
+\begin{quote}
+``Be proactive about security''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faIndustry}{robustness}{the solution work very well}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Persistence \& Loyalty}{Managed to guess what needed to be done without people asking in a very fast evolving environment.}
+
+\divider
+
+\cvachievement{\faUsers}{Coworkers}{Working with a pack of really skilled persons and being part of them.}
+
+\divider
+
+\cvachievement{\faMoon}{Overnight migrations}{In startups you have jobs for 2 of you, the 2nd you is living during the nighttime.}
+
+\cvsection{Strengths}
+
+\cvtag{lots of ideas}
+\cvtag{highly skilled in kubernetes}\\
+\cvtag{highly skilled in infrastructure}
+
+\divider\smallskip
+
+\cvtag{Helm}
+\cvtag{Kubernetes}
+\cvtag{Migrations}
+\cvtag{Python}
+\cvtag{Security}
+
+\cvsection{Languages}
+
+\parskip=3pt % small space here
+
+\cvskill{Terraform}{4}
+\cvskill{Shell}{5}
+% \divider
+
+\cvskill{Golang}{1}
+% \divider
+\cvskill{Python}{5}
+\cvskill{Bash}{4}
+
+\end{paracol}
+
+\end{document}
+
